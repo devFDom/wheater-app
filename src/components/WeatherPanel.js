@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import Form from "./Form";
 import Card from "./Card";
@@ -26,6 +27,7 @@ const WeatherPanel = () => {
 
     await fetch(urlWeather)
       .then((response) => {
+        // eslint-disable-next-line no-throw-literal
         if (!response.ok) throw { response };
         return response.json();
       })
@@ -45,6 +47,7 @@ const WeatherPanel = () => {
 
     await fetch(urlForecast)
       .then((response) => {
+        // eslint-disable-next-line no-throw-literal
         if (!response.ok) throw { response };
         return response.json();
       })
